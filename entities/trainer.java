@@ -1,18 +1,13 @@
 package entities;
 
 public class Trainer extends Person {
-    String[] courses;
-    int id;
+    private String[] courses;
 
     public Trainer(String[] courses, int id, String firstName, String  lastName, String email){
-        super(firstName, lastName, email);
+        super(firstName, lastName, email, id);
         this.courses = courses;
-        this.id = id;
     }
 
-    public int getId() {
-        return id;
-    }
 
     public String[] getCourses() {
         return courses;

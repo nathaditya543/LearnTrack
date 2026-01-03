@@ -1,12 +1,14 @@
 package entities;
 
 public class Person {
-    String firstName, lastName, email;
+    private String firstName, lastName, email;
+    private int id;
 
-    public Person(String firstName, String lastName, String email){
+    public Person(String firstName, String lastName, String email, int id){
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
+        this.id = id;
     }
 
     public String getName(){
@@ -15,5 +17,9 @@ public class Person {
 
     public String getEmail() {
         return email;
+    }
+
+    public int getId(){
+        return id;
     }
 }

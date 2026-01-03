@@ -1,12 +1,9 @@
 package entities;
 
-import java.time.Duration;
-import java.util.concurrent.CopyOnWriteArrayList;
-
 public class Course{
-    int id, duration;
-    String CourseName, desc;
-    boolean active;
+    private int id, duration;
+    private String CourseName, desc;
+    private boolean active;
 
 
     Course(int id, int duration, String CourseName, String desc){
@@ -25,12 +22,27 @@ public class Course{
         this.active = active;
     }
 
-    void getCourse(){
-        System.out.println("Course Name: " + CourseName);
-        System.out.println("Course ID: " + id);
-        System.out.println("Course Duration: " + duration);
-        System.out.println("Course Description: " + desc);
-        System.out.println("Course Active?: " + active);
+    public int getId() {
+        return id;
     }
 
+    public int getDuration() {
+        return duration;
+    }
+
+    public String getCourseName() {
+        return CourseName;
+    }
+
+    public String getDesc() {
+        return desc;
+    }
+
+    public boolean getStatus() {
+        return active;
+    }
+
+    public void setActive(boolean active) {
+        this.active = active;
+    }
 }

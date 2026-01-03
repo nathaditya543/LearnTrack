@@ -1,9 +1,9 @@
 package entities;
 
-public class person {
+public class Person {
     String firstName, lastName, email;
 
-    public person(String firstName, String lastName, String email){
+    public Person(String firstName, String lastName, String email){
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;

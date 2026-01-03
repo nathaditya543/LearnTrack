@@ -1,10 +1,10 @@
 package entities;
 
-public class trainer extends person {
+public class Trainer extends Person {
     String[] courses;
     int id;
 
-    trainer(String[] courses, int id, String firstName, String  lastName, String email){
+    public Trainer(String[] courses, int id, String firstName, String  lastName, String email){
         super(firstName, lastName, email);
         this.courses = courses;
         this.id = id;

@@ -1,7 +1,10 @@
 package entities;
 
+import java.util.ArrayList;
+
 public class Student extends Person {
     private boolean active;
+    public ArrayList<Course> courseList = new ArrayList<>();
 
     //Constructor overloading - when admin wants to define an active user they can do so with a single parameter only
     public Student(int id,  String firstName, String lastName, String  email){
@@ -23,11 +26,15 @@ public class Student extends Person {
 
     @Override
     public String getName(){
-        return "Student: " + super.getName();
+        return "# Student: " + super.getName();
     }
 
     public void setActive(boolean active){
         this.active = active;
+    }
+
+    public void addCourse(Course course){
+        courseList.add(course);
     }
 
 }

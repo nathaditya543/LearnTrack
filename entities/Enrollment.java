@@ -1,11 +1,14 @@
 package entities;
 import java.time.LocalDate;
 
+import entities.Student;
+import entities.Course;
+
 public class Enrollment {
 
     private int id;
-    private int studentId;
-    private int courseId;
+    Student student;
+    Course course;
     private LocalDate enrollmentDate;
     
     public enum Status{
@@ -16,10 +19,10 @@ public class Enrollment {
     
     Status status;
     
-    public Enrollment(int id, int studentId, int courseId) {
+    public Enrollment(int id,  Student student, Course course) {
         this.id = id;
-        this.studentId = studentId;
-        this.courseId = courseId;
+        this.course = course;
+        this.student = student;
         this.enrollmentDate = LocalDate.now();
         this.status = Status.ACTIVE;
     }
@@ -27,13 +30,13 @@ public class Enrollment {
     public int getId() {
         return id;
     }
-
-    public int getStudentId() {
-        return studentId;
+    
+    public Student getStudent(){
+        return student;
     }
 
-    public int getCourseId() {
-        return courseId;
+    public Course getCourse(){
+        return course;
     }
 
     public LocalDate getEnrollmentDate() {
@@ -49,7 +52,8 @@ public class Enrollment {
 
         if(status == Status.COMPLETED)
             return "COMPLETED";
-
+        
+        return "Error";
     }
 
     public void setStatus(String status) {

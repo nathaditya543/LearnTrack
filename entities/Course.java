@@ -1,12 +1,15 @@
 package entities;
+import entities.Student;
+import java.util.*;
 
 public class Course{
     private int id, duration;
     private String CourseName, desc;
     private boolean active;
+    private ArrayList<Student> studList = new ArrayList<>();
 
 
-    Course(int id, int duration, String CourseName, String desc){
+    public Course(int id, int duration, String CourseName, String desc){
         this.id = id;
         this.duration = duration;
         this.CourseName = CourseName;
@@ -14,7 +17,7 @@ public class Course{
         active = true;
     }
 
-    Course(int id, int duration, String CourseName, String desc, boolean active){
+    public Course(int id, int duration, String CourseName, String desc, boolean active){
         this.id = id;
         this.duration = duration;
         this.CourseName = CourseName;
@@ -44,5 +47,13 @@ public class Course{
 
     public void setActive(boolean active) {
         this.active = active;
+    }
+
+    public void addStudent(Student student){
+        studList.add(student);
+    }
+
+    public ArrayList<Student> getStudents(){
+        return studList;
     }
 }
